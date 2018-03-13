@@ -3,7 +3,7 @@
 
 ;; Globals
 (define off-eff (csv->list (open-input-file "data/offensive-efficiency.csv")))
-(define def-eff(csv->list (open-input-file "data/defensive-efficiency.csv")))
+(define def-eff (csv->list (open-input-file "data/defensive-efficiency.csv")))
 (define adj-eff (csv->list (open-input-file "data/adjusted-efficiency-margin.csv")))
 
 ;; Data Interaction
@@ -36,4 +36,4 @@
 
 
 ;; Testing
-(compare-teams "Ohio State" "North Carolina")
+(compare-teams "Michigan St" "Kansas")
