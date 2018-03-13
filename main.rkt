@@ -26,20 +26,14 @@
 
 ;; Scoring
 (define (compare-teams team1 team2)
-  (cond ((compute-score team1) > (compute-score team2)) ((print "Hallo"))))
+  (cond
+    [(> (compute-score team1) (compute-score team2)) (print team1)]
+    [(< (compute-score team1) (compute-score team2)) (print team2)]
+    [(= (compute-score team1) (compute-score team2)) (print "Tie!")]))
 
 (define (compute-score team)
-  (print "world"))
-(print "Hello")
+  (/ (+ (string->number (get-rank off-eff team)) (string->number (get-rank def-eff team)) (string->number (get-rank adj-eff team))) 3))
 
 
 ;; Testing
-(next-row)
-(next-row)
-(next-row)
-(next-row)
-(next-row)
-
-(return-matching-row off-eff "Ohio State ")
-(get-rank off-eff "Ohio State ")
-
+(compare-teams "Ohio State" "North Carolina")
